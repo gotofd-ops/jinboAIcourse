@@ -41,18 +41,24 @@ import pdf13 from '@/assets/pdf_page_13.webp';
 import pdf14 from '@/assets/pdf_page_14.webp';
 import slide3New from '@/assets/slide3_new.webp';
 
-export const slides: Slide[] = slidesData.map((s: any, index: number) => {
+// Environment variable to control PDF slides visibility
+const includePdfSlides = import.meta.env.VITE_INCLUDE_PDF_SLIDES === 'true';
+
+// Filter slides based on environment variable
+const filteredSlidesData = includePdfSlides 
+  ? slidesData 
+  : slidesData.filter(s => s.id < 4 || s.id > 17);
+
+export const slides: Slide[] = filteredSlidesData.map((s: any, index: number) => {
   let image = s.image || candyCover;
 
   if (!s.image) {
-    // Slides 3-16 are PDF pages
-    if (s.id === 3) {
-      image = slide3New;
-    } else if (s.id > 3 && s.id <= 16) {
+    // Slides 4-17 are PDF pages (only included if includePdfSlides is true)
+    if (s.id >= 4 && s.id <= 17) {
       const pdfImages = [pdf01, pdf02, pdf03, pdf04, pdf05, pdf06, pdf07, pdf08, pdf09, pdf10, pdf11, pdf12, pdf13, pdf14];
-      image = pdfImages[s.id - 3];
+      image = pdfImages[s.id - 4];
     } else {
-      const originalId = s.id >= 17 ? s.id - 10 : s.id;
+      const originalId = s.id >= 18 ? s.id - 11 : s.id - 1;
 
       switch (originalId) {
         case 1: image = candyCover; break;
@@ -90,16 +96,17 @@ export const slides: Slide[] = slidesData.map((s: any, index: number) => {
   }
 
   // Determine if this slide starts a new module
-  const prevSlide = slidesData[index - 1];
+  const prevSlide = filteredSlidesData[index - 1];
   const isModuleStart = !prevSlide || s.module !== prevSlide.module;
 
   // Handle multi-image slide
   let images: string[] | undefined;
-  if (s.id === 17) images = [slide18Top, slide18Bottom];
-  else if (s.id === 18) images = [lectureHall, lectureCloseup];
+  if (s.id === 18) images = [slide18Top, slide18Bottom];
+  else if (s.id === 19) images = [lectureHall, lectureCloseup];
 
   return {
     ...s,
+    id: index + 1, // Re-index slides after filtering
     image,
     images,
     isModuleStart
