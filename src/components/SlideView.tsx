@@ -36,6 +36,7 @@ export default function SlideView({ slide, isActive }: SlideViewProps) {
   const isCover = slide.layoutType === 'cover';
   const isPdfPage = slide.layoutType === 'pdf';
   const isComparison = slide.layoutType === 'comparison';
+  const isQr = slide.layoutType === 'qr';
 
   // Candy Style Variants
   const cardVariants: Variants = {
@@ -74,21 +75,27 @@ export default function SlideView({ slide, isActive }: SlideViewProps) {
         animate="visible"
         className={cn(
           "w-full h-full bg-card shadow-2xl overflow-hidden flex flex-col relative z-10",
-          slide.id === 24 ? "md:flex-row-reverse" : "md:flex-row",
+          isQr ? "items-center" : ([22, 24].includes(slide.id) ? "md:flex-row-reverse" : "md:flex-row"),
           isPdfPage ? "rounded-none border-none max-w-full" : "max-w-7xl md:h-[90%] rounded-[2rem] border-4 border-white"
         )}
       >
-        {/* Logo - Present on every slide */}
-        {!isPdfPage && (
-          <div className="absolute top-6 left-6 z-40 bg-white/60 backdrop-blur-sm p-2 rounded-xl border border-white/40 shadow-sm">
-            <img src="assets/logo.png" alt="Jinbo Logo" className="h-10 md:h-12 w-auto object-contain" />
+        {/* Module Label (Floating Pill) - Hide on PDF pages */}
+        {!isCover && !isPdfPage && (
+          <div className={cn(
+            "absolute top-6 z-30 bg-secondary text-secondary-foreground px-6 py-2 rounded-full font-bold shadow-md transform",
+            (isQr || ![22, 24].includes(slide.id)) ? "right-6 rotate-2" : "left-6 -rotate-2"
+          )}>
+            {slide.module.split('：')[0]}
           </div>
         )}
 
-        {/* Module Label (Floating Pill) - Hide on PDF pages */}
-        {!isCover && !isPdfPage && (
-          <div className="absolute top-6 right-6 z-30 bg-secondary text-secondary-foreground px-6 py-2 rounded-full font-bold shadow-md transform rotate-2">
-            {slide.module.split('：')[0]}
+        {/* Logo - Present on every slide, move to opposite side of module label */}
+        {!isPdfPage && (
+          <div className={cn(
+            "absolute top-6 z-40 bg-white/60 backdrop-blur-sm p-2 rounded-xl border border-white/40 shadow-sm",
+            [22, 24].includes(slide.id) ? "right-6" : "left-6"
+          )}>
+            <img src="assets/logo.png" alt="Jinbo Logo" className="h-10 md:h-12 w-auto object-contain" />
           </div>
         )}
 
@@ -202,6 +209,55 @@ export default function SlideView({ slide, isActive }: SlideViewProps) {
               #{slide.id.toString().padStart(2, '0')}
             </div>
           </div>
+        ) : isQr ? (
+          /* QR Code Focused Layout */
+          <div className="flex flex-col h-full p-6 md:p-12 w-full items-center justify-center text-center bg-white relative z-20 overflow-y-auto custom-scrollbar">
+            <motion.h2
+              initial={{ y: -20, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              className="text-3xl md:text-5xl font-bold text-primary mb-6 md:mb-10"
+            >
+              {slide.title}
+            </motion.h2>
+
+            <motion.div
+              initial={{ scale: 0.8, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              transition={{ delay: 0.2, type: "spring" }}
+              className="relative group mb-8 md:mb-12 flex-shrink-0"
+            >
+              <div className="absolute -inset-4 bg-gradient-to-r from-primary via-accent to-secondary rounded-[3rem] blur-2xl opacity-20 group-hover:opacity-40 transition-opacity" />
+              <div className="relative bg-white p-4 md:p-8 rounded-[2.5rem] border-8 border-white shadow-2xl flex items-center justify-center overflow-hidden">
+                <img
+                  src={slide.image}
+                  alt="QR Code"
+                  className="w-auto h-[40vh] md:h-[50vh] max-w-[80vw] object-contain"
+                />
+              </div>
+            </motion.div>
+
+            {/* Data Support Text below QR */}
+            <motion.div
+              initial={{ y: 20, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: 0.4 }}
+              className="max-w-4xl"
+            >
+              <div className="text-lg md:text-2xl font-bold text-foreground leading-relaxed bg-secondary/10 px-6 py-3 md:px-10 md:py-5 rounded-2xl border-2 border-secondary/20 shadow-sm mb-4">
+                <HighlightNumbers text={slide.dataSupport} />
+              </div>
+
+              {slide.content && slide.content.length > 0 && (
+                <div className="flex flex-col items-center space-y-1 md:space-y-3 mt-4">
+                  {slide.content.map((item, idx) => (
+                    <p key={idx} className="text-base md:text-xl text-muted-foreground font-medium italic">
+                      — {item} —
+                    </p>
+                  ))}
+                </div>
+              )}
+            </motion.div>
+          </div>
         ) : (
           /* Standard Split Layout */
           <>
@@ -212,7 +268,7 @@ export default function SlideView({ slide, isActive }: SlideViewProps) {
                 <div className="absolute inset-0 w-full h-full">
                   <iframe
                     src={`${slide.video}${slide.video.includes('?') ? '&' : '?'}autoplay=1&mute=1&loop=1&controls=0&modestbranding=1&rel=0`}
-                    className="w-full h-full border-0 pointer-events-none scale-[1.3]"
+                    className="w-full h-full border-0 scale-[1.3]"
                     allow="autoplay; encrypted-media"
                     title="Gemini Multimodal Demo"
                   />

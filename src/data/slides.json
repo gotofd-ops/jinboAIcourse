@@ -3,7 +3,7 @@
     "id": 1,
     "module": "签到——培训开始",
     "title": "扫码签到：开启智能之旅",
-    "layoutType": "standard",
+    "layoutType": "qr",
     "dataSupport": "请各位学员打开微信扫一扫完成课程签到。",
     "image": "assets/qr_code.png",
     "content": [
@@ -410,7 +410,7 @@
     "id": 43,
     "module": "第六模块：结语——2026 生存法则",
     "title": "敬请批评指正",
-    "layoutType": "standard",
+    "layoutType": "qr",
     "dataSupport": "感谢您的参与！请扫描下方二维码完成培训效果评估。",
     "image": "assets/eval_qr_code.png",
     "content": []

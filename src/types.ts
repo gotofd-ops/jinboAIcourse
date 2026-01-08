@@ -1,4 +1,4 @@
-export type LayoutType = 'cover' | 'pdf' | 'comparison' | 'standard';
+export type LayoutType = 'cover' | 'pdf' | 'comparison' | 'standard' | 'qr';
 
 export interface Slide {
   id: number;
