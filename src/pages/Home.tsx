@@ -1,8 +1,8 @@
 import { useEffect, useState, useCallback, useMemo } from 'react';
-import { slides } from '@/lib/slides';
+import { defaultSlides, processSlides } from '@/lib/slides';
 import SlideView from '@/components/SlideView';
 import { AnimatePresence, motion } from 'framer-motion';
-import { ChevronRight, ChevronLeft, Menu } from 'lucide-react';
+import { ChevronRight, ChevronLeft, Menu, Eye, EyeOff } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import {
   Tooltip,
@@ -15,6 +15,12 @@ import { cn } from '@/lib/utils';
 export default function Home() {
   const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
   const [direction, setDirection] = useState(0); // -1 for prev, 1 for next
+  const [showAllSlides, setShowAllSlides] = useState(true); // Local: true, Online: false
+
+  // Dynamic slides based on toggle
+  const slides = useMemo(() => {
+    return processSlides(showAllSlides);
+  }, [showAllSlides]);
 
   const totalSlides = slides.length;
 
@@ -48,7 +54,7 @@ export default function Home() {
       }
     });
     return mods;
-  }, []);
+  }, [slides]);
 
   const currentModule = useMemo(() => {
     return modules.slice().reverse().find(m => currentSlideIndex >= m.startIndex);
@@ -73,10 +79,18 @@ export default function Home() {
     setCurrentSlideIndex(index);
   };
 
+  // Reset slide index when toggle changes to avoid out-of-bounds
+  useEffect(() => {
+    if (currentSlideIndex >= totalSlides) {
+      setCurrentSlideIndex(0);
+      setDirection(0);
+    }
+  }, [totalSlides, currentSlideIndex]);
+
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       switch (e.key) {
-        case ' ':
+        case ' ': 
         case 'ArrowRight':
         case 'PageDown':
           e.preventDefault();
@@ -99,6 +113,40 @@ export default function Home() {
   return (
     <div className="bg-background min-h-screen text-foreground overflow-hidden selection:bg-primary selection:text-primary-foreground font-sans">
       
+      {/* Toggle Button for Slide Version */}
+      <div className="fixed top-6 right-6 z-50">
+        <TooltipProvider delayDuration={100}>
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <Button
+                onClick={() => setShowAllSlides(prev => !prev)}
+                variant="default"
+                size="sm"
+                className="flex items-center gap-2 bg-white/90 backdrop-blur-md text-foreground hover:bg-white border-2 border-primary/20 shadow-lg"
+              >
+                {showAllSlides ? (
+                  <>
+                    <Eye className="w-4 h-4" />
+                    <span className="text-sm font-bold">本地版</span>
+                  </>
+                ) : (
+                  <>
+                    <EyeOff className="w-4 h-4" />
+                    <span className="text-sm font-bold">在线版</span>
+                  </>
+                )}
+              </Button>
+            </TooltipTrigger>
+            <TooltipContent 
+              side="bottom" 
+              className="bg-white/90 backdrop-blur-md text-foreground border-none shadow-xl font-display font-bold px-4 py-2 rounded-xl"
+            >
+              <p>{showAllSlides ? '切换到在线版视图' : '切换到本地版视图'}</p>
+            </TooltipContent>
+          </Tooltip>
+        </TooltipProvider>
+      </div>
+
       {/* Module Navigation Bar (Candy Dock) */}
       <div className="fixed top-6 left-1/2 -translate-x-1/2 z-50 flex items-center gap-3 p-2 px-4 rounded-full bg-white/20 backdrop-blur-xl border border-white/40 shadow-lg hover:bg-white/30 transition-all duration-300">
         <TooltipProvider delayDuration={100}>

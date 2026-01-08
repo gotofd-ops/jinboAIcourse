@@ -41,74 +41,85 @@ import pdf13 from '@/assets/pdf_page_13.webp';
 import pdf14 from '@/assets/pdf_page_14.webp';
 import slide3New from '@/assets/slide3_new.webp';
 
-// Environment variable to control PDF slides visibility
-const includePdfSlides = import.meta.env.VITE_INCLUDE_PDF_SLIDES === 'true';
+// Helper function to process slides with dynamic filtering
+const processSlides = (keepAllSlides: boolean): Slide[] => {
+  // Filter slides based on the parameter
+  // Keep slide 4 in online version, filter only 5-17
+  const filteredSlidesData = keepAllSlides 
+    ? slidesData 
+    : slidesData.filter(s => s.id < 5 || s.id > 17);
 
-// Filter slides based on environment variable
-const filteredSlidesData = includePdfSlides 
-  ? slidesData 
-  : slidesData.filter(s => s.id < 4 || s.id > 17);
+  return filteredSlidesData.map((s: any, index: number) => {
+    let image = s.image || candyCover;
 
-export const slides: Slide[] = filteredSlidesData.map((s: any, index: number) => {
-  let image = s.image || candyCover;
+    if (!s.image) {
+      // Slides 4-17 are PDF pages
+      if (s.id >= 4 && s.id <= 17) {
+        const pdfImages = [pdf01, pdf02, pdf03, pdf04, pdf05, pdf06, pdf07, pdf08, pdf09, pdf10, pdf11, pdf12, pdf13, pdf14];
+        image = pdfImages[s.id - 4];
+      } else {
+        const originalId = s.id >= 18 ? s.id - 11 : s.id - 1;
 
-  if (!s.image) {
-    // Slides 4-17 are PDF pages (only included if includePdfSlides is true)
-    if (s.id >= 4 && s.id <= 17) {
-      const pdfImages = [pdf01, pdf02, pdf03, pdf04, pdf05, pdf06, pdf07, pdf08, pdf09, pdf10, pdf11, pdf12, pdf13, pdf14];
-      image = pdfImages[s.id - 4];
-    } else {
-      const originalId = s.id >= 18 ? s.id - 11 : s.id - 1;
-
-      switch (originalId) {
-        case 1: image = candyCover; break;
-        case 2: image = candyRocket; break;
-        case 7: image = zhangjiLecture; break;
-        case 8: image = lectureHall; break;
-        case 9: image = candyLaptop; break;
-        case 10: image = monet; break;
-        case 11: image = candyBrain; break;
-        case 12: image = candyData; break;
-        case 13: image = gemini; break;
-        case 14: image = candyData; break;
-        case 15: image = coding; break;
-        case 16: image = candyRocket; break;
-        case 17: image = candyBrain; break;
-        case 18: image = candyLaptop; break;
-        case 19: image = coding2; break;
-        case 20: image = candyCover; break;
-        case 21: image = liziqi; break;
-        case 22: image = meituan; break;
-        case 23: image = xiaomi; break;
-        case 24: image = candyCover; break;
-        case 25: image = candyLaptop; break;
-        case 26: image = candyRocket; break;
-        case 27: image = candyLaptop; break;
-        case 28: image = candyBrain; break;
-        case 29: image = candyData; break;
-        case 30: image = coding2; break;
-        case 31: image = candyBrain; break;
-        case 32: image = candyRocket; break;
-        case 33: image = candyCover; break;
-        default: image = candyCover;
+        switch (originalId) {
+          case 1: image = candyCover; break;
+          case 2: image = candyRocket; break;
+          case 7: image = zhangjiLecture; break;
+          case 8: image = lectureHall; break;
+          case 9: image = candyLaptop; break;
+          case 10: image = monet; break;
+          case 11: image = candyBrain; break;
+          case 12: image = candyData; break;
+          case 13: image = gemini; break;
+          case 14: image = candyData; break;
+          case 15: image = coding; break;
+          case 16: image = candyRocket; break;
+          case 17: image = candyBrain; break;
+          case 18: image = candyLaptop; break;
+          case 19: image = coding2; break;
+          case 20: image = candyCover; break;
+          case 21: image = liziqi; break;
+          case 22: image = meituan; break;
+          case 23: image = xiaomi; break;
+          case 24: image = candyCover; break;
+          case 25: image = candyLaptop; break;
+          case 26: image = candyRocket; break;
+          case 27: image = candyLaptop; break;
+          case 28: image = candyBrain; break;
+          case 29: image = candyData; break;
+          case 30: image = coding2; break;
+          case 31: image = candyBrain; break;
+          case 32: image = candyRocket; break;
+          case 33: image = liziqi; break;
+          default: image = candyCover;
+        }
       }
     }
-  }
 
-  // Determine if this slide starts a new module
-  const prevSlide = filteredSlidesData[index - 1];
-  const isModuleStart = !prevSlide || s.module !== prevSlide.module;
+    // Determine if this slide starts a new module
+    const prevSlide = filteredSlidesData[index - 1];
+    const isModuleStart = !prevSlide || s.module !== prevSlide.module;
 
-  // Handle multi-image slide
-  let images: string[] | undefined;
-  if (s.id === 18) images = [slide18Top, slide18Bottom];
-  else if (s.id === 19) images = [lectureHall, lectureCloseup];
+    // Handle multi-image slide
+    let images: string[] | undefined;
+    if (s.id === 18) images = [slide18Top, slide18Bottom];
+    else if (s.id === 19) images = [lectureHall, lectureCloseup];
+    else if (s.id === 33) images = [liziqi, liziqi]; // Use liziqi image for both positions
 
-  return {
-    ...s,
-    id: index + 1, // Re-index slides after filtering
-    image,
-    images,
-    isModuleStart
-  };
-});
+    return {
+      ...s,
+      id: index + 1, // Re-index slides after filtering
+      image,
+      images,
+      isModuleStart
+    };
+  });
+};
+
+// Environment variable to control default PDF slides visibility
+const includePdfSlidesByDefault = import.meta.env.VITE_INCLUDE_PDF_SLIDES === 'true';
+
+// Export default slides based on environment variable
+export const defaultSlides = processSlides(includePdfSlidesByDefault);
+
+// Export the process function to allow dynamic filtering
+export { processSlides };

@@ -211,52 +211,85 @@ export default function SlideView({ slide, isActive }: SlideViewProps) {
           </div>
         ) : isQr ? (
           /* QR Code Focused Layout */
-          <div className="flex flex-col h-full p-6 md:p-12 w-full items-center justify-center text-center bg-white relative z-20 overflow-y-auto custom-scrollbar">
-            <motion.h2
-              initial={{ y: -20, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              className="text-3xl md:text-5xl font-bold text-primary mb-6 md:mb-10"
-            >
-              {slide.title}
-            </motion.h2>
+          <div className="flex flex-col h-full p-4 md:p-8 w-full items-center justify-center text-center bg-white relative z-20 overflow-y-auto custom-scrollbar">
+            {/* Logo remains at top */}
+            {/* Module label remains at top */}
+            
+            {/* Content Container with proper spacing */}
+            <div className="flex flex-col items-center justify-center w-full max-w-4xl mx-auto py-8">
+              {/* Title - Optimized for full visibility */}
+              <motion.h2
+                initial={{ y: -20, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ 
+                  delay: 0.1, 
+                  duration: 0.5,
+                  ease: "easeOut"
+                }}
+                className="text-2xl md:text-4xl lg:text-5xl font-bold text-primary mb-6 md:mb-8 w-full"
+              >
+                {slide.title}
+              </motion.h2>
 
-            <motion.div
-              initial={{ scale: 0.8, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              transition={{ delay: 0.2, type: "spring" }}
-              className="relative group mb-8 md:mb-12 flex-shrink-0"
-            >
-              <div className="absolute -inset-4 bg-gradient-to-r from-primary via-accent to-secondary rounded-[3rem] blur-2xl opacity-20 group-hover:opacity-40 transition-opacity" />
-              <div className="relative bg-white p-4 md:p-8 rounded-[2.5rem] border-8 border-white shadow-2xl flex items-center justify-center overflow-hidden">
-                <img
-                  src={slide.image}
-                  alt="QR Code"
-                  className="w-auto h-[40vh] md:h-[50vh] max-w-[80vw] object-contain"
-                />
-              </div>
-            </motion.div>
-
-            {/* Data Support Text below QR */}
-            <motion.div
-              initial={{ y: 20, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ delay: 0.4 }}
-              className="max-w-4xl"
-            >
-              <div className="text-lg md:text-2xl font-bold text-foreground leading-relaxed bg-secondary/10 px-6 py-3 md:px-10 md:py-5 rounded-2xl border-2 border-secondary/20 shadow-sm mb-4">
-                <HighlightNumbers text={slide.dataSupport} />
-              </div>
-
-              {slide.content && slide.content.length > 0 && (
-                <div className="flex flex-col items-center space-y-1 md:space-y-3 mt-4">
-                  {slide.content.map((item, idx) => (
-                    <p key={idx} className="text-base md:text-xl text-muted-foreground font-medium italic">
-                      — {item} —
-                    </p>
-                  ))}
+              {/* QR Code Section - Optimized size and positioning */}
+              <motion.div
+                initial={{ scale: 0.9, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                transition={{ 
+                  delay: 0.2, 
+                  duration: 0.5,
+                  ease: "easeOut"
+                }}
+                className="relative group mb-8 md:mb-10 flex-shrink-0"
+              >
+                {/* QR Code container */}
+                <div className="relative bg-white p-4 md:p-8 rounded-2xl border-4 border-white shadow-xl flex items-center justify-center">
+                  <img
+                    src={slide.image}
+                    alt="QR Code"
+                    className="w-auto h-[30vh] md:h-[40vh] lg:h-[45vh] max-w-[80vw] object-contain"
+                  />
                 </div>
-              )}
-            </motion.div>
+              </motion.div>
+
+              {/* Data Support Text - Optimized for readability */}
+              <motion.div
+                initial={{ y: 20, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ 
+                  delay: 0.3, 
+                  duration: 0.5,
+                  ease: "easeOut"
+                }}
+                className="w-full px-4"
+              >
+                <div className="text-sm md:text-lg lg:text-xl font-bold text-foreground leading-relaxed bg-secondary/10 px-6 py-4 md:px-8 md:py-6 rounded-xl border border-secondary/20 shadow-sm">
+                  <HighlightNumbers text={slide.dataSupport} />
+                </div>
+
+                {/* Additional content if any */}
+                {slide.content && slide.content.length > 0 && (
+                  <div className="flex flex-col items-center space-y-2 md:space-y-3 mt-4">
+                    {slide.content.map((item, idx) => (
+                      <motion.p 
+                        key={idx}
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.4 + (idx * 0.1), duration: 0.3 }}
+                        className="text-xs md:text-sm lg:text-base text-muted-foreground font-medium italic"
+                      >
+                        — {item} —
+                      </motion.p>
+                    ))}
+                  </div>
+                )}
+              </motion.div>
+            </div>
+
+            {/* Slide Number - Moved to bottom center for better visibility */}
+            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 text-white font-mono text-sm bg-black/20 backdrop-blur-md px-4 py-2 rounded-xl z-20">
+              #{slide.id.toString().padStart(2, '0')}
+            </div>
           </div>
         ) : (
           /* Standard Split Layout */
