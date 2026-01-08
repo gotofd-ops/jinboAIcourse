@@ -1,0 +1,405 @@
+[
+  {
+    "id": 1,
+    "module": "第一模块：开场——从算力极限到智能下沉",
+    "title": "封面：看清 AI 的第一性原理",
+    "layoutType": "cover",
+    "dataSupport": "2024年诺贝尔物理学奖与化学奖均授予 AI 相关领域；IDC 预测到 2025 年全球 AI 支出将突破 2000 亿美元。",
+    "content": [
+      "张骥"
+    ]
+  },
+  {
+    "id": 2,
+    "module": "第一模块：开场——从算力极限到智能下沉",
+    "title": "AI：科学革命的工具而非单纯工具",
+    "layoutType": "standard",
+    "dataSupport": "习近平总书记在 2024 年全国科技大会强调：人工智能是“科技革命的革命性工具”；Nature 统计 AI 驱动的科研成果在过去三年增长了 160%。",
+    "content": []
+  },
+  {
+    "id": 3,
+    "module": "三维地质结构模型研究进展 (PDF插入)",
+    "title": "三维地质结构模型研究进展",
+    "layoutType": "pdf",
+    "dataSupport": "",
+    "content": []
+  },
+  {
+    "id": 4,
+    "module": "三维地质结构模型研究进展 (PDF插入)",
+    "title": "大模型技术正在驱动许多行业发生变革",
+    "layoutType": "pdf",
+    "dataSupport": "",
+    "content": []
+  },
+  {
+    "id": 5,
+    "module": "三维地质结构模型研究进展 (PDF插入)",
+    "title": "地球科学亟需人工智能蓄势赋能",
+    "layoutType": "pdf",
+    "dataSupport": "",
+    "content": []
+  },
+  {
+    "id": 6,
+    "module": "三维地质结构模型研究进展 (PDF插入)",
+    "title": "三维地质结构建模是地球科学的关键",
+    "layoutType": "pdf",
+    "dataSupport": "",
+    "content": []
+  },
+  {
+    "id": 7,
+    "module": "三维地质结构模型研究进展 (PDF插入)",
+    "title": "数据驱动的三维地质结构建模新范式",
+    "layoutType": "pdf",
+    "dataSupport": "",
+    "content": []
+  },
+  {
+    "id": 8,
+    "module": "三维地质结构模型研究进展 (PDF插入)",
+    "title": "总体框架：页岩油领域1+X模型体系",
+    "layoutType": "pdf",
+    "dataSupport": "",
+    "content": []
+  },
+  {
+    "id": 9,
+    "module": "三维地质结构模型研究进展 (PDF插入)",
+    "title": "研究进展：勘探语料建设Pipeline",
+    "layoutType": "pdf",
+    "dataSupport": "",
+    "content": []
+  },
+  {
+    "id": 10,
+    "module": "三维地质结构模型研究进展 (PDF插入)",
+    "title": "研究进展：三维地质勘探数据集建设",
+    "layoutType": "pdf",
+    "dataSupport": "",
+    "content": []
+  },
+  {
+    "id": 11,
+    "module": "三维地质结构模型研究进展 (PDF插入)",
+    "title": "研究进展：页岩油领域基础模型",
+    "layoutType": "pdf",
+    "dataSupport": "",
+    "content": []
+  },
+  {
+    "id": 12,
+    "module": "三维地质结构模型研究进展 (PDF插入)",
+    "title": "研究进展：三维地震模型",
+    "layoutType": "pdf",
+    "dataSupport": "",
+    "content": []
+  },
+  {
+    "id": 13,
+    "module": "三维地质结构模型研究进展 (PDF插入)",
+    "title": "研究进展：测井模型",
+    "layoutType": "pdf",
+    "dataSupport": "",
+    "content": []
+  },
+  {
+    "id": 14,
+    "module": "三维地质结构模型研究进展 (PDF插入)",
+    "title": "研究进展：三维井震联合模型",
+    "layoutType": "pdf",
+    "dataSupport": "",
+    "content": []
+  },
+  {
+    "id": 15,
+    "module": "三维地质结构模型研究进展 (PDF插入)",
+    "title": "研究进展：场景验证",
+    "layoutType": "pdf",
+    "dataSupport": "",
+    "content": []
+  },
+  {
+    "id": 16,
+    "module": "三维地质结构模型研究进展 (PDF插入)",
+    "title": "谢 谢",
+    "layoutType": "pdf",
+    "dataSupport": "",
+    "content": []
+  },
+  {
+    "id": 17,
+    "module": "第二模块：教学进化——莫奈的吸管颜料",
+    "title": "教学实证：全光谱的 20+ 班次",
+    "layoutType": "standard",
+    "dataSupport": "2025年，作为‘大模型种子班’核心讲师，主导3个月一轮的滚动实训；带领学员优化数据吞吐，将模型训练效率提升1个数量级。",
+    "content": [
+      "5个月的极限突围：从物理学背景的‘零基础’选手，到手搓10亿参数模型的硬核讲师，我见证了‘实战育才’的惊人速度。",
+      "凌晨的实验室灯光：我们不是在简单复刻代码，而是在挑战算力极限。通过优化算法，我们成功解决了海量科学数据处理中的 GPU 等待问题。",
+      "100% 的全情投入：‘大模型不是万能的，不懂大模型是万万不能的。’我将踩过的每一个‘坑’都化作了后来者的阶梯。"
+    ]
+  },
+  {
+    "id": 18,
+    "module": "第二模块：教学进化——莫奈的吸管颜料",
+    "title": "荣誉背后：投身科普，点燃求知火种",
+    "layoutType": "standard",
+    "dataSupport": "2025年9月14日，主讲‘走进人工智能’第5期科普讲座；现场100+席位座无虚席；深度解析ShaleOne三维地震基座模型。",
+    "content": [
+      "10年风云回顾：从 AlphaGo 的惊世一弈到 DeepSeek 的平民化浪潮，我带领100多位青少年穿越了 AI 发展的激荡十年。",
+      "万米深地探索：人类对脚下的认知远逊于星空。我用‘给地球做B超’的通俗比喻，解析了 ShaleOne 模型如何让地下数千米的构造‘显形’。",
+      "1场思维启蒙：面对‘机器会思考吗’的终极发问，孩子们眼中的光芒告诉我：科学的火种已经点燃。科普，是连接实验室与未来的最短桥梁。"
+    ]
+  },
+  {
+    "id": 19,
+    "module": "第二模块：教学进化——莫奈的吸管颜料",
+    "title": "教学 1.0 与 2.0：从冶金到打磨",
+    "layoutType": "comparison",
+    "dataSupport": "1.0 关注 50 年历史的算法；2.0 关注 7 年历史的 Transformer；技术生命周期呈指数级坍缩。",
+    "content": []
+  },
+  {
+    "id": 20,
+    "module": "第二模块：教学进化——莫奈的吸管颜料",
+    "title": "AI3.0：莫奈与吸管颜料",
+    "layoutType": "standard",
+    "dataSupport": "19 世纪中叶吸管颜料发明使画家户外创作效率提升 400%。莫奈一生创作了约 2000 幅油画。",
+    "content": []
+  },
+  {
+    "id": 21,
+    "module": "第二模块：教学进化——莫奈的吸管颜料",
+    "title": "Transformer：大模型的“大脑”解构",
+    "layoutType": "standard",
+    "dataSupport": "2017 年 Google 发布的《Attention is All You Need》定义了现代 AI 的基石；自注意力机制使模型具备处理无限长程关联的能力。",
+    "image": "/src/assets/transformer_principle.png",
+    "content": [
+      "自注意力机制 (Self-Attention)：打破序列处理瓶颈，让模型在生成的每一个字都能“同时审视”全文关键词。",
+      "并行计算架构：摒弃 RNN 的串行依赖，直接利用海量 GPU 算力进行预训练，是模型从“玩具”走向“生产力”的前提。",
+      "统一符号系统：无论是文本、像素还是音频，都被转化为高维向量，在 Transformer 空间中进行语义重构。",
+      "涌现（Emergence）：随着参数规模指数级增长，模型在跨学科知识迁移与逻辑推理上表现出类似人类的“直觉”。"
+    ]
+  },
+  {
+    "id": 22,
+    "module": "第三模块：前沿能力——Gemini 3 这把“超级锤子”",
+    "title": "智能成本的坍塌：300 倍跌落",
+    "layoutType": "standard",
+    "dataSupport": "从 2022 年底 GPT-3.5 的 $20 到 2025 年初 DeepSeek-V3 的 $0.14，智能每百万 Token 的获取成本呈指数级暴跌（来源：各厂商 API 实时报价）。",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Jensen_Huang_-_Nvidia_Keynote_-_CES_2025_Las_Vegas_%281%29.jpg/1024px-Jensen_Huang_-_Nvidia_Keynote_-_CES_2025_Las_Vegas_%281%29.jpg",
+    "chartData": [
+      {
+        "year": "2022.12 (GPT-3.5)",
+        "cost": 20,
+        "label": "$20.00"
+      },
+      {
+        "year": "2023.03 (GPT-3.5-T)",
+        "cost": 2,
+        "label": "$2.00"
+      },
+      {
+        "year": "2023.11 (GPT-4-T)",
+        "cost": 10,
+        "label": "$10.00"
+      },
+      {
+        "year": "2024.05 (GPT-4o)",
+        "cost": 5,
+        "label": "$5.00"
+      },
+      {
+        "year": "2024.07 (GPT-4o-M)",
+        "cost": 0.15,
+        "label": "$0.15"
+      },
+      {
+        "year": "2025.01 (DS-V3)",
+        "cost": 0.14,
+        "label": "$0.14"
+      }
+    ],
+    "content": []
+  },
+  {
+    "id": 23,
+    "module": "第三模块：前沿能力——Gemini 3 这把“超级锤子”",
+    "title": "原生多模态：全感官感知",
+    "layoutType": "standard",
+    "video": "https://www.youtube.com/embed/UIZAiXYceBI",
+    "dataSupport": "Gemini 1.5 Pro 在 MMMU 测试中达到 65.9%，刷新多模态理解基准（来源：Google 2024 技术报告）。",
+    "content": [
+      "MMMU (综合推理): 65.9% (College-level Reasoning)",
+      "MathVista (视觉数学): 68.1% (SOTA in Visual Math)",
+      "DocVQA (文档理解): 86.5% (Document AI Mastery)",
+      "ChartQA (图表转换): 84.4% (Chart-to-Logic reasoning)",
+      "InfographicVQA (信息图): 79.5% (Complex visual design analysis)"
+    ]
+  },
+  {
+    "id": 24,
+    "module": "第三模块：前沿能力——Gemini 3 这把“超级锤子”",
+    "title": "200万上下文：海量信息的即时消化",
+    "layoutType": "standard",
+    "dataSupport": "Gemini 3 拥有 2,000,000 Token 窗口，可一次性处理 20 小时音频或 2 小时视频。",
+    "image": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2070&auto=format&fit=crop",
+    "content": [
+      "处理能力：一次性处理 2,000,000 Token，相当于 10 万行代码、20 小时音频 or 2 小时视频，处理长度约是《战争与和平》的 3 倍。",
+      "即时响应：在海量非虚构数据中实现秒级精准检索与逻辑重构，彻底扫除“大海捞针”式的信息焦虑。",
+      "深度理解：跨模态数据的统一表征，让模型从简单的“关键词匹配”进化到对复杂场景的“洞察级理解”。",
+      "长程推理：支持在整部技术文档或大规模代码库中进行复杂的逻辑跳转与归因分析，将 AI 的角色从“片段处理器”提升至“全局架构师”。"
+    ]
+  },
+  {
+    "id": 25,
+    "module": "第三模块：前沿能力——Gemini 3 这把“超级锤子”",
+    "title": "工具生产力：95% 的一次通过率",
+    "layoutType": "standard",
+    "dataSupport": "在 HumanEval 测试中，Gemini 3 级模型 Pass@1 突破 95%；平均解决复杂 Bug 的耗时从人类的“小时/天”降至“秒/分”。",
+    "content": [
+      "一次通过率 (Pass@1)：面对标准编程挑战，95% 的代码在第一次运行即通过编译并满足所有测试用例，本质上消除了基础调试循环。",
+      "案例对比：AI 曾用 120 秒完成了 Codeforces 竞赛题，该题对顶尖人类选手通常需要 20-30 分钟，且准确率超越 87% 的全球参赛者。",
+      "工程奇迹：在 SWE-bench 真实软件维护测试中，AI 自动定位并修复数千行代码中的逻辑漏洞，这类工作以往需要资深工程师跨文件排查 1-2 天。",
+      "能力倍差：与其说 AI 是“更快的程序员”，不如说它是“同步并行、永不疲劳、且拥有全量知识库”的逻辑工厂。"
+    ]
+  },
+  {
+    "id": 26,
+    "module": "第三模块：前沿能力——Gemini 3 这把“超级锤子”",
+    "title": "从代码片段到全自动化部署",
+    "layoutType": "standard",
+    "dataSupport": "AI Agent 独立构建并部署中型微服务的时间从数天缩短至 3-5 分钟。",
+    "content": []
+  },
+  {
+    "id": 27,
+    "module": "第三模块：前沿能力——Gemini 3 这把“超级锤子”",
+    "title": "System 2：引入“慢思考”机制",
+    "layoutType": "standard",
+    "dataSupport": "引入推理时间计算（Inference-time Compute）后，模型处理高难度数理题准确率从 15% 飙升至 80%。",
+    "content": []
+  },
+  {
+    "id": 28,
+    "module": "第三模块：前沿能力——Gemini 3 这把“超级锤子”",
+    "title": "长路径规划：50 个步骤的自动拆解",
+    "layoutType": "standard",
+    "dataSupport": "Gemini 3 支持超过 50 步的复杂任务链拆解，任务成功率提升 3 倍。",
+    "content": []
+  },
+  {
+    "id": 29,
+    "module": "第三模块：前沿能力——Gemini 3 这把“超级锤子”",
+    "title": "能力实证：一个震撼的“复杂任务”案例",
+    "layoutType": "standard",
+    "dataSupport": "案例：AI 成功在 30 分钟内完成了一个涉及“多方财务审计+异常检测+自动追回邮件撰写”的全链路任务。",
+    "content": []
+  },
+  {
+    "id": 30,
+    "module": "第四模块：技术平权——三面镜子",
+    "title": "技术平权的三面镜子：专家到本能",
+    "layoutType": "standard",
+    "dataSupport": "每一项伟大的平权技术，其学习曲线均从“阶梯式”变为“水平式”。",
+    "content": []
+  },
+  {
+    "id": 31,
+    "module": "第四模块：技术平权——三面镜子",
+    "title": "李子柒：审美主权的平权",
+    "layoutType": "standard",
+    "dataSupport": "李子柒带动全球创作者经济突破 $2500 亿美元；计算摄影使影像产出量提升 100 倍。",
+    "content": []
+  },
+  {
+    "id": 32,
+    "module": "第四模块：技术平权——三面镜子",
+    "title": "美团骑手：经验壁垒的平权",
+    "layoutType": "standard",
+    "dataSupport": "美团拥有 700 万活跃骑手；高精导航将熟悉路况的时间从 3 个月缩短至 1 天。",
+    "content": []
+  },
+  {
+    "id": 33,
+    "module": "第四模块：技术平权——三面镜子",
+    "title": "小米智驾：生理极限的平权",
+    "layoutType": "standard",
+    "dataSupport": "小米 NOA 为人均每年节省约 300 小时；端到端模型反应速度比人类快 250 毫秒。",
+    "content": []
+  },
+  {
+    "id": 34,
+    "module": "第四模块：技术平权——三面镜子",
+    "title": "平权规律：工具与目的的共生",
+    "layoutType": "standard",
+    "dataSupport": "每一个伟大的平权技术，都会诞生一个“高价值新场景”。",
+    "content": []
+  },
+  {
+    "id": 35,
+    "module": "第五模块：Vibe Coding 深度拆解（2025 战国时代）",
+    "title": "2025 编程战国：夏日的 Agent 爆发",
+    "layoutType": "standard",
+    "dataSupport": "2025 年 7-10 月，Replit Agent 宣布“对话即上线”，Cursor 实现多文件逻辑同步。",
+    "content": []
+  },
+  {
+    "id": 36,
+    "module": "第五模块：Vibe Coding 深度拆解（2025 战国时代）",
+    "title": "2025 战国时代：秋季的行动觉醒",
+    "layoutType": "standard",
+    "dataSupport": "2025 年 11 月，Anthropic 推出 Computer Use，AI 开始接管键盘 and 鼠标。",
+    "content": []
+  },
+  {
+    "id": 37,
+    "module": "第五模块：Vibe Coding 深度拆解（2025 战国时代）",
+    "title": "2025 战国时代：冬季的感知合流",
+    "layoutType": "standard",
+    "dataSupport": "2025 年 12 月，谷歌等巨头展示多模态实时感知，AI 具备识别人类手势与情绪波动的能力。",
+    "content": []
+  },
+  {
+    "id": 38,
+    "module": "第五模块：Vibe Coding 深度拆解（2025 战国时代）",
+    "title": "震撼产出：非技术开发者的 340% 增长",
+    "layoutType": "standard",
+    "dataSupport": "GitHub 2025 年度报告：非计算机背景开发者贡献量同比增长 340%；AI Agent 贡献了平台上 25% 的新增代码。",
+    "content": []
+  },
+  {
+    "id": 39,
+    "module": "第五模块：Vibe Coding 深度拆解（2025 战国时代）",
+    "title": "Vibe Coding 精髓：意图即编译器",
+    "layoutType": "standard",
+    "dataSupport": "从 Syntax (语法) 到 Semantics (语义) 的权重转移比例为 8:2。",
+    "content": []
+  },
+  {
+    "id": 40,
+    "module": "第六模块：结语——2026 生存法则",
+    "title": "WEF 2027 预测：核心竞争力的位移",
+    "layoutType": "standard",
+    "dataSupport": "WEF 预测：好奇心与洞察力的权重将提升 50%。",
+    "content": []
+  },
+  {
+    "id": 41,
+    "module": "第六模块：结语——2026 生存法则",
+    "title": "总结：发现更有价值的场景",
+    "layoutType": "standard",
+    "dataSupport": "[此处建议回顾 Slide 13 的 200万上下文与 Slide 29 的 340% 增长]",
+    "content": []
+  },
+  {
+    "id": 42,
+    "module": "第六模块：结语——2026 生存法则",
+    "title": "敬请批评指正",
+    "layoutType": "standard",
+    "dataSupport": "",
+    "content": []
+  }
+]

@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>看清 AI 的第一性原理：从实验室到大众红利</title>
+    
+    <!-- DNS Prefetch & Preconnect for faster font loading -->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Preload critical fonts with display=swap for faster text rendering -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Fredoka:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+      <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Fredoka:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    </noscript>
+    
+    <!-- Inline critical CSS for faster first paint -->
+    <style>
+      /* Critical CSS for first paint */
+      :root {
+        --background: oklch(0.98 0.01 95);
+        --foreground: oklch(0.25 0.1 300);
+      }
+      body {
+        margin: 0;
+        background-color: oklch(0.98 0.01 95);
+        color: oklch(0.25 0.1 300);
+        font-family: 'Quicksand', system-ui, sans-serif;
+      }
+      #root {
+        min-height: 100vh;
+      }
+      /* Loading placeholder */
+      .loading-skeleton {
+        background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+        background-size: 200% 100%;
+        animation: shimmer 1.5s infinite;
+      }
+      @keyframes shimmer {
+        0% { background-position: -200% 0; }
+        100% { background-position: 200% 0; }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
