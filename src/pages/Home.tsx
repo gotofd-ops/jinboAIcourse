@@ -15,7 +15,8 @@ import { cn } from '@/lib/utils';
 export default function Home() {
   const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
   const [direction, setDirection] = useState(0); // -1 for prev, 1 for next
-  const [showAllSlides, setShowAllSlides] = useState(true); // Local: true, Online: false
+  // Get initial state from environment variable, not hardcoded
+  const [showAllSlides, setShowAllSlides] = useState(() => import.meta.env.VITE_INCLUDE_PDF_SLIDES === 'true');
 
   // Dynamic slides based on toggle
   const slides = useMemo(() => {
