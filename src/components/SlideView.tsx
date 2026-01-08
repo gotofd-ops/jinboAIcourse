@@ -81,7 +81,7 @@ export default function SlideView({ slide, isActive }: SlideViewProps) {
         {/* Logo - Present on every slide */}
         {!isPdfPage && (
           <div className="absolute top-6 left-6 z-40 bg-white/60 backdrop-blur-sm p-2 rounded-xl border border-white/40 shadow-sm">
-            <img src="/src/assets/logo.png" alt="Jinbo Logo" className="h-10 md:h-12 w-auto object-contain" />
+            <img src="assets/logo.png" alt="Jinbo Logo" className="h-10 md:h-12 w-auto object-contain" />
           </div>
         )}
 

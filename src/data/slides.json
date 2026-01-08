@@ -1,6 +1,18 @@
 [
   {
     "id": 1,
+    "module": "签到——培训开始",
+    "title": "扫码签到：开启智能之旅",
+    "layoutType": "standard",
+    "dataSupport": "请各位学员打开微信扫一扫完成课程签到。",
+    "image": "assets/qr_code.png",
+    "content": [
+      "请在该页面停留 5 分钟等待学员到齐",
+      "如有技术问题请联系现场助教"
+    ]
+  },
+  {
+    "id": 2,
     "module": "第一模块：开场——从算力极限到智能下沉",
     "title": "封面：看清 AI 的第一性原理",
     "layoutType": "cover",
@@ -10,7 +22,7 @@
     ]
   },
   {
-    "id": 2,
+    "id": 3,
     "module": "第一模块：开场——从算力极限到智能下沉",
     "title": "AI：科学革命的工具而非单纯工具",
     "layoutType": "standard",
@@ -18,7 +30,7 @@
     "content": []
   },
   {
-    "id": 3,
+    "id": 4,
     "module": "三维地质结构模型研究进展 (PDF插入)",
     "title": "三维地质结构模型研究进展",
     "layoutType": "pdf",
@@ -26,7 +38,7 @@
     "content": []
   },
   {
-    "id": 4,
+    "id": 5,
     "module": "三维地质结构模型研究进展 (PDF插入)",
     "title": "大模型技术正在驱动许多行业发生变革",
     "layoutType": "pdf",
@@ -34,7 +46,7 @@
     "content": []
   },
   {
-    "id": 5,
+    "id": 6,
     "module": "三维地质结构模型研究进展 (PDF插入)",
     "title": "地球科学亟需人工智能蓄势赋能",
     "layoutType": "pdf",
@@ -42,7 +54,7 @@
     "content": []
   },
   {
-    "id": 6,
+    "id": 7,
     "module": "三维地质结构模型研究进展 (PDF插入)",
     "title": "三维地质结构建模是地球科学的关键",
     "layoutType": "pdf",
@@ -50,7 +62,7 @@
     "content": []
   },
   {
-    "id": 7,
+    "id": 8,
     "module": "三维地质结构模型研究进展 (PDF插入)",
     "title": "数据驱动的三维地质结构建模新范式",
     "layoutType": "pdf",
@@ -58,7 +70,7 @@
     "content": []
   },
   {
-    "id": 8,
+    "id": 9,
     "module": "三维地质结构模型研究进展 (PDF插入)",
     "title": "总体框架：页岩油领域1+X模型体系",
     "layoutType": "pdf",
@@ -66,7 +78,7 @@
     "content": []
   },
   {
-    "id": 9,
+    "id": 10,
     "module": "三维地质结构模型研究进展 (PDF插入)",
     "title": "研究进展：勘探语料建设Pipeline",
     "layoutType": "pdf",
@@ -74,7 +86,7 @@
     "content": []
   },
   {
-    "id": 10,
+    "id": 11,
     "module": "三维地质结构模型研究进展 (PDF插入)",
     "title": "研究进展：三维地质勘探数据集建设",
     "layoutType": "pdf",
@@ -82,7 +94,7 @@
     "content": []
   },
   {
-    "id": 11,
+    "id": 12,
     "module": "三维地质结构模型研究进展 (PDF插入)",
     "title": "研究进展：页岩油领域基础模型",
     "layoutType": "pdf",
@@ -90,7 +102,7 @@
     "content": []
   },
   {
-    "id": 12,
+    "id": 13,
     "module": "三维地质结构模型研究进展 (PDF插入)",
     "title": "研究进展：三维地震模型",
     "layoutType": "pdf",
@@ -98,7 +110,7 @@
     "content": []
   },
   {
-    "id": 13,
+    "id": 14,
     "module": "三维地质结构模型研究进展 (PDF插入)",
     "title": "研究进展：测井模型",
     "layoutType": "pdf",
@@ -106,7 +118,7 @@
     "content": []
   },
   {
-    "id": 14,
+    "id": 15,
     "module": "三维地质结构模型研究进展 (PDF插入)",
     "title": "研究进展：三维井震联合模型",
     "layoutType": "pdf",
@@ -114,7 +126,7 @@
     "content": []
   },
   {
-    "id": 15,
+    "id": 16,
     "module": "三维地质结构模型研究进展 (PDF插入)",
     "title": "研究进展：场景验证",
     "layoutType": "pdf",
@@ -122,7 +134,7 @@
     "content": []
   },
   {
-    "id": 16,
+    "id": 17,
     "module": "三维地质结构模型研究进展 (PDF插入)",
     "title": "谢 谢",
     "layoutType": "pdf",
@@ -130,7 +142,7 @@
     "content": []
   },
   {
-    "id": 17,
+    "id": 18,
     "module": "第二模块：教学进化——莫奈的吸管颜料",
     "title": "教学实证：全光谱的 20+ 班次",
     "layoutType": "standard",
@@ -142,7 +154,7 @@
     ]
   },
   {
-    "id": 18,
+    "id": 19,
     "module": "第二模块：教学进化——莫奈的吸管颜料",
     "title": "荣誉背后：投身科普，点燃求知火种",
     "layoutType": "standard",
@@ -154,7 +166,7 @@
     ]
   },
   {
-    "id": 19,
+    "id": 20,
     "module": "第二模块：教学进化——莫奈的吸管颜料",
     "title": "教学 1.0 与 2.0：从冶金到打磨",
     "layoutType": "comparison",
@@ -162,7 +174,7 @@
     "content": []
   },
   {
-    "id": 20,
+    "id": 21,
     "module": "第二模块：教学进化——莫奈的吸管颜料",
     "title": "AI3.0：莫奈与吸管颜料",
     "layoutType": "standard",
@@ -170,12 +182,12 @@
     "content": []
   },
   {
-    "id": 21,
+    "id": 22,
     "module": "第二模块：教学进化——莫奈的吸管颜料",
     "title": "Transformer：大模型的“大脑”解构",
     "layoutType": "standard",
     "dataSupport": "2017 年 Google 发布的《Attention is All You Need》定义了现代 AI 的基石；自注意力机制使模型具备处理无限长程关联的能力。",
-    "image": "/src/assets/transformer_principle.png",
+    "image": "assets/transformer_principle.png",
     "content": [
       "自注意力机制 (Self-Attention)：打破序列处理瓶颈，让模型在生成的每一个字都能“同时审视”全文关键词。",
       "并行计算架构：摒弃 RNN 的串行依赖，直接利用海量 GPU 算力进行预训练，是模型从“玩具”走向“生产力”的前提。",
@@ -184,7 +196,7 @@
     ]
   },
   {
-    "id": 22,
+    "id": 23,
     "module": "第三模块：前沿能力——Gemini 3 这把“超级锤子”",
     "title": "智能成本的坍塌：300 倍跌落",
     "layoutType": "standard",
@@ -225,7 +237,7 @@
     "content": []
   },
   {
-    "id": 23,
+    "id": 24,
     "module": "第三模块：前沿能力——Gemini 3 这把“超级锤子”",
     "title": "原生多模态：全感官感知",
     "layoutType": "standard",
@@ -240,11 +252,11 @@
     ]
   },
   {
-    "id": 24,
+    "id": 25,
     "module": "第三模块：前沿能力——Gemini 3 这把“超级锤子”",
     "title": "200万上下文：海量信息的即时消化",
     "layoutType": "standard",
-    "dataSupport": "Gemini 3 拥有 2,000,000 Token 窗口，可一次性处理 20 小时音频或 2 小时视频。",
+    "dataSupport": "Gemini 3 拥有 2,000,000 Token 窗口，可一次性处理 20 小时音频 or 2 小时视频。",
     "image": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2070&auto=format&fit=crop",
     "content": [
       "处理能力：一次性处理 2,000,000 Token，相当于 10 万行代码、20 小时音频 or 2 小时视频，处理长度约是《战争与和平》的 3 倍。",
@@ -254,7 +266,7 @@
     ]
   },
   {
-    "id": 25,
+    "id": 26,
     "module": "第三模块：前沿能力——Gemini 3 这把“超级锤子”",
     "title": "工具生产力：95% 的一次通过率",
     "layoutType": "standard",
@@ -267,7 +279,7 @@
     ]
   },
   {
-    "id": 26,
+    "id": 27,
     "module": "第三模块：前沿能力——Gemini 3 这把“超级锤子”",
     "title": "从代码片段到全自动化部署",
     "layoutType": "standard",
@@ -275,7 +287,7 @@
     "content": []
   },
   {
-    "id": 27,
+    "id": 28,
     "module": "第三模块：前沿能力——Gemini 3 这把“超级锤子”",
     "title": "System 2：引入“慢思考”机制",
     "layoutType": "standard",
@@ -283,7 +295,7 @@
     "content": []
   },
   {
-    "id": 28,
+    "id": 29,
     "module": "第三模块：前沿能力——Gemini 3 这把“超级锤子”",
     "title": "长路径规划：50 个步骤的自动拆解",
     "layoutType": "standard",
@@ -291,7 +303,7 @@
     "content": []
   },
   {
-    "id": 29,
+    "id": 30,
     "module": "第三模块：前沿能力——Gemini 3 这把“超级锤子”",
     "title": "能力实证：一个震撼的“复杂任务”案例",
     "layoutType": "standard",
@@ -299,7 +311,7 @@
     "content": []
   },
   {
-    "id": 30,
+    "id": 31,
     "module": "第四模块：技术平权——三面镜子",
     "title": "技术平权的三面镜子：专家到本能",
     "layoutType": "standard",
@@ -307,7 +319,7 @@
     "content": []
   },
   {
-    "id": 31,
+    "id": 32,
     "module": "第四模块：技术平权——三面镜子",
     "title": "李子柒：审美主权的平权",
     "layoutType": "standard",
@@ -315,7 +327,7 @@
     "content": []
   },
   {
-    "id": 32,
+    "id": 33,
     "module": "第四模块：技术平权——三面镜子",
     "title": "美团骑手：经验壁垒的平权",
     "layoutType": "standard",
@@ -323,7 +335,7 @@
     "content": []
   },
   {
-    "id": 33,
+    "id": 34,
     "module": "第四模块：技术平权——三面镜子",
     "title": "小米智驾：生理极限的平权",
     "layoutType": "standard",
@@ -331,7 +343,7 @@
     "content": []
   },
   {
-    "id": 34,
+    "id": 35,
     "module": "第四模块：技术平权——三面镜子",
     "title": "平权规律：工具与目的的共生",
     "layoutType": "standard",
@@ -339,7 +351,7 @@
     "content": []
   },
   {
-    "id": 35,
+    "id": 36,
     "module": "第五模块：Vibe Coding 深度拆解（2025 战国时代）",
     "title": "2025 编程战国：夏日的 Agent 爆发",
     "layoutType": "standard",
@@ -347,7 +359,7 @@
     "content": []
   },
   {
-    "id": 36,
+    "id": 37,
     "module": "第五模块：Vibe Coding 深度拆解（2025 战国时代）",
     "title": "2025 战国时代：秋季的行动觉醒",
     "layoutType": "standard",
@@ -355,7 +367,7 @@
     "content": []
   },
   {
-    "id": 37,
+    "id": 38,
     "module": "第五模块：Vibe Coding 深度拆解（2025 战国时代）",
     "title": "2025 战国时代：冬季的感知合流",
     "layoutType": "standard",
@@ -363,7 +375,7 @@
     "content": []
   },
   {
-    "id": 38,
+    "id": 39,
     "module": "第五模块：Vibe Coding 深度拆解（2025 战国时代）",
     "title": "震撼产出：非技术开发者的 340% 增长",
     "layoutType": "standard",
@@ -371,7 +383,7 @@
     "content": []
   },
   {
-    "id": 39,
+    "id": 40,
     "module": "第五模块：Vibe Coding 深度拆解（2025 战国时代）",
     "title": "Vibe Coding 精髓：意图即编译器",
     "layoutType": "standard",
@@ -379,7 +391,7 @@
     "content": []
   },
   {
-    "id": 40,
+    "id": 41,
     "module": "第六模块：结语——2026 生存法则",
     "title": "WEF 2027 预测：核心竞争力的位移",
     "layoutType": "standard",
@@ -387,7 +399,7 @@
     "content": []
   },
   {
-    "id": 41,
+    "id": 42,
     "module": "第六模块：结语——2026 生存法则",
     "title": "总结：发现更有价值的场景",
     "layoutType": "standard",
@@ -395,11 +407,12 @@
     "content": []
   },
   {
-    "id": 42,
+    "id": 43,
     "module": "第六模块：结语——2026 生存法则",
     "title": "敬请批评指正",
     "layoutType": "standard",
-    "dataSupport": "",
+    "dataSupport": "感谢您的参与！请扫描下方二维码完成培训效果评估。",
+    "image": "assets/eval_qr_code.png",
     "content": []
   }
 ]
