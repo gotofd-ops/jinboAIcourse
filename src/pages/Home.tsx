@@ -111,8 +111,32 @@ export default function Home() {
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [nextSlide, prevSlide]);
 
+  // Add click to next slide functionality
+  const handleSlideClick = (e: React.MouseEvent) => {
+    // Only trigger on main content area, not on buttons or interactive elements
+    const target = e.target as HTMLElement;
+    
+    // Check if the clicked element is interactive
+    const isInteractive = target.tagName.match(/^(BUTTON|A|INPUT|TEXTAREA|SELECT|IMG|SVG|CANVAS)$/) ||
+                         target.hasAttribute('onclick') ||
+                         target.hasAttribute('onmousedown') ||
+                         target.hasAttribute('onmouseup') ||
+                         target.hasAttribute('href') ||
+                         target.closest('[onclick],[onmousedown],[onmouseup],[href],button,a,input,textarea,select,img,svg,canvas') !== null;
+    
+    // Only trigger next slide if not interactive
+    if (!isInteractive) {
+      nextSlide();
+    }
+  };
+
+
+
   return (
-    <div className="bg-background min-h-screen text-foreground overflow-hidden selection:bg-primary selection:text-primary-foreground font-sans">
+    <div 
+      className="bg-background min-h-screen text-foreground overflow-hidden selection:bg-primary selection:text-primary-foreground font-sans"
+      onClick={handleSlideClick} // Add click to next functionality
+    >
       
       {/* Local/Online Toggle - Only show in development */}
       {import.meta.env.VITE_INCLUDE_PDF_SLIDES === 'true' && (
@@ -183,7 +207,7 @@ export default function Home() {
           animate={{ opacity: 1, x: 0 }}
           exit={{ opacity: 0, x: direction > 0 ? -100 : 100 }}
           transition={{ duration: 0.4, ease: "easeInOut" }}
-          className="w-full h-full absolute inset-0"
+          className="w-full h-full absolute inset-0 cursor-pointer"
         >
           <SlideView 
             slide={slides[currentSlideIndex]} 
@@ -192,8 +216,8 @@ export default function Home() {
         </motion.div>
       </AnimatePresence>
 
-      {/* Bottom Navigation Controls */}
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-50 flex items-center space-x-6 opacity-0 hover:opacity-100 transition-opacity duration-300 bg-white/10 backdrop-blur-sm p-2 rounded-full px-6 border border-white/20">
+      {/* Bottom Navigation Controls - Always visible with better styling */}
+      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-50 flex items-center space-x-6 opacity-100 bg-white/10 backdrop-blur-sm p-2 rounded-full px-6 border border-white/20 shadow-lg">
          <Button 
             variant="ghost" 
             size="icon" 
@@ -219,10 +243,15 @@ export default function Home() {
          </Button>
       </div>
 
-      {/* Keyboard Hint Overlay (Only on first slide) */}
+      {/* Click hint overlay */}
       {currentSlideIndex === 0 && (
          <div className="absolute bottom-8 right-8 text-xs font-mono text-muted-foreground/50 pointer-events-none hidden md:block animate-pulse">
-            [Space] to Start
+            [Click] or [Space] to Continue
+         </div>
+      )}
+      {currentSlideIndex > 0 && currentSlideIndex < totalSlides - 1 && (
+         <div className="absolute bottom-8 right-8 text-xs font-mono text-muted-foreground/30 pointer-events-none hidden md:block">
+            [Click] or [Arrow Keys] to Navigate
          </div>
       )}
     </div>

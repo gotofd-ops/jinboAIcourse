@@ -29,42 +29,42 @@
 }
 
 :root {
-  /* Candy Color Block Theme */
-  --background: oklch(0.98 0.01 95); /* Creamy White */
-  --foreground: oklch(0.25 0.1 300); /* Deep Violet Text */
+  /* 龙马吉祥 Theme */
+  --background: oklch(1 0 0); /* Pure White */
+  --foreground: oklch(0.1 0 0); /* Deep Black Text */
   
   --card: oklch(1 0 0); /* White */
-  --card-foreground: oklch(0.25 0.1 300);
+  --card-foreground: oklch(0.1 0 0);
   
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.25 0.1 300);
+  --popover-foreground: oklch(0.1 0 0);
   
-  --primary: oklch(0.65 0.25 350); /* Hot Pink */
+  --primary: oklch(0.65 0.25 20); /* Chinese Red */
   --primary-foreground: oklch(1 0 0);
   
-  --secondary: oklch(0.88 0.18 95); /* Lemon Yellow */
-  --secondary-foreground: oklch(0.25 0.1 300);
+  --secondary: oklch(0.85 0.15 70); /* Golden Yellow */
+  --secondary-foreground: oklch(0.1 0 0);
   
-  --muted: oklch(0.95 0.03 300); /* Light Lavender */
-  --muted-foreground: oklch(0.5 0.1 300);
+  --muted: oklch(0.95 0.02 70); /* Light Golden */
+  --muted-foreground: oklch(0.3 0 0);
   
-  --accent: oklch(0.6 0.2 240); /* Electric Blue */
+  --accent: oklch(0.7 0.2 40); /* Warm Orange */
   --accent-foreground: oklch(1 0 0);
   
-  --destructive: oklch(0.6 0.2 20); /* Red */
+  --destructive: oklch(0.6 0.25 10); /* Dark Red */
   
-  --border: oklch(0.9 0.05 300);
-  --input: oklch(0.9 0.05 300);
-  --ring: oklch(0.65 0.25 350);
+  --border: oklch(0.8 0.1 70); /* Golden Border */
+  --input: oklch(0.95 0.02 70);
+  --ring: oklch(0.65 0.25 20); /* Red Ring */
   
   --radius: 1.5rem; /* Very rounded */
   
   /* Chart Colors for Recharts */
-  --chart-1: oklch(0.65 0.25 350); /* Pink */
-  --chart-2: oklch(0.88 0.18 95); /* Yellow */
-  --chart-3: oklch(0.6 0.2 240); /* Blue */
-  --chart-4: oklch(0.7 0.2 160); /* Green */
-  --chart-5: oklch(0.65 0.2 30);  /* Orange */
+  --chart-1: oklch(0.65 0.25 20); /* Red */
+  --chart-2: oklch(0.85 0.15 70); /* Golden Yellow */
+  --chart-3: oklch(0.7 0.2 40); /* Warm Orange */
+  --chart-4: oklch(0.6 0.15 120); /* Lucky Green */
+  --chart-5: oklch(0.5 0.15 300);  /* Deep Purple */
 }
 
 /* Force light mode base */

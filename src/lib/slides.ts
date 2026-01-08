@@ -77,7 +77,7 @@ const processSlides = (keepAllSlides: boolean): Slide[] => {
           case 18: image = candyLaptop; break;
           case 19: image = coding2; break;
           case 20: image = candyCover; break;
-          case 21: image = liziqi; break;
+          case 21: image = monet; break;
           case 22: image = meituan; break;
           case 23: image = xiaomi; break;
           case 24: image = candyCover; break;

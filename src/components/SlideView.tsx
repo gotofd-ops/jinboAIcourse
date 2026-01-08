@@ -211,12 +211,9 @@ export default function SlideView({ slide, isActive }: SlideViewProps) {
           </div>
         ) : isQr ? (
           /* QR Code Focused Layout */
-          <div className="flex flex-col h-full p-4 md:p-8 w-full items-center justify-center text-center bg-white relative z-20 overflow-y-auto custom-scrollbar">
-            {/* Logo remains at top */}
-            {/* Module label remains at top */}
-            
+          <div className="flex flex-col h-full p-4 md:p-6 w-full items-center justify-center text-center bg-white relative z-20 overflow-y-auto custom-scrollbar">
             {/* Content Container with proper spacing */}
-            <div className="flex flex-col items-center justify-center w-full max-w-4xl mx-auto py-8">
+            <div className="flex flex-col items-center justify-center w-full max-w-4xl mx-auto py-4">
               {/* Title - Optimized for full visibility */}
               <motion.h2
                 initial={{ y: -20, opacity: 0 }}
@@ -226,7 +223,7 @@ export default function SlideView({ slide, isActive }: SlideViewProps) {
                   duration: 0.5,
                   ease: "easeOut"
                 }}
-                className="text-2xl md:text-4xl lg:text-5xl font-bold text-primary mb-6 md:mb-8 w-full"
+                className="text-xl md:text-3xl lg:text-4xl font-bold text-primary mb-4 md:mb-6 w-full mt-16 md:mt-24"
               >
                 {slide.title}
               </motion.h2>
@@ -263,20 +260,20 @@ export default function SlideView({ slide, isActive }: SlideViewProps) {
                 }}
                 className="w-full px-4"
               >
-                <div className="text-sm md:text-lg lg:text-xl font-bold text-foreground leading-relaxed bg-secondary/10 px-6 py-4 md:px-8 md:py-6 rounded-xl border border-secondary/20 shadow-sm">
+                <div className="text-sm md:text-base lg:text-lg font-bold text-foreground leading-relaxed bg-secondary/10 px-6 py-3 md:px-8 md:py-5 rounded-xl border border-secondary/20 shadow-sm">
                   <HighlightNumbers text={slide.dataSupport} />
                 </div>
 
                 {/* Additional content if any */}
                 {slide.content && slide.content.length > 0 && (
-                  <div className="flex flex-col items-center space-y-2 md:space-y-3 mt-4">
+                  <div className="flex flex-col items-center space-y-2 md:space-y-3 mt-3">
                     {slide.content.map((item, idx) => (
                       <motion.p 
                         key={idx}
                         initial={{ opacity: 0, y: 10 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.4 + (idx * 0.1), duration: 0.3 }}
-                        className="text-xs md:text-sm lg:text-base text-muted-foreground font-medium italic"
+                        className="text-xs md:text-sm lg:text-sm text-muted-foreground font-medium italic"
                       >
                         — {item} —
                       </motion.p>
